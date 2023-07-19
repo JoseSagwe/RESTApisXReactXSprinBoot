@@ -14,8 +14,6 @@ const apiClient = axios.create(
     }
 )
 
-
-
 export  const retrieveHelloBean = () =>apiClient.get('/helloB')
 
 
@@ -24,11 +22,6 @@ export  const retrieveHelloBean = () =>apiClient.get('/helloB')
 
 // //////////           OR              //////////
 export  const retrieveHelloBeanParam = (username) => apiClient.get(`/hello-bean/${username}`)
-
-
-
-
-
 
 
 

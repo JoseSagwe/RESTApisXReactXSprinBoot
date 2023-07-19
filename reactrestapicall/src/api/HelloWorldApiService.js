@@ -15,8 +15,6 @@ const apiClient = axios.create(
     }
 )
 
-
-
 export  const retrieveHelloBean = () =>apiClient.get('/helloB')
 
 
