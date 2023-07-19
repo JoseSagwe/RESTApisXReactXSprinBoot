@@ -26,8 +26,6 @@ export  const retrieveHelloBeanParam = (username) => apiClient.get(`/hello-bean/
 
 
 
-
-
 // import axios from 'axios'
 
 // export default function WelcomeComponent(){
