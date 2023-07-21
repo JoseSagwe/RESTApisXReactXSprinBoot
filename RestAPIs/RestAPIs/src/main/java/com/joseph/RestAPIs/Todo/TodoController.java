@@ -30,8 +30,15 @@ public class TodoController {
          return ResponseEntity.noContent().build();
     }
 
-//    @PatchMapping("/")
-//    public void updateTodo(){
-//        service.updateTodo(todo);
-//    }
+    @PutMapping ("users/{username}/todos/{id}")
+    public Todo updateTodo(@PathVariable String username, @PathVariable int id, @RequestBody Todo todo){
+        service.updateTodo(todo);
+        return todo;
+    }
+
+    @PostMapping ("users/{username}/todos")
+    public Todo createTodo(@PathVariable String username, @RequestBody Todo todo){
+        Todo createdTodo =  service.addTodo(username, todo.getDescription(), todo.getTargetDate(), todo.isDone());
+        return createdTodo;
+    }
 }
