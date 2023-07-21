@@ -23,7 +23,9 @@ public class SpringSecurityConfiguration {
         //1: Response to preflight request doesn't pass access control check
         //2: basic auth
                 http.authorizeHttpRequests(
-                                auth -> auth.anyRequest().authenticated()
+                                auth -> auth
+                                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+                                        .anyRequest().authenticated()
                                     );
 
                         //basic authentication to show pop up for authentication
