@@ -29,6 +29,7 @@ public class HelloController {
         return new HelloBean(String.format("Hello Buddy I am  %s", name));
     }
 
+
     //pathVariables. used to extract values from the URL path
     @GetMapping("/user/{name}/{age}")
     public String variable(@PathVariable String name, @PathVariable Long age){

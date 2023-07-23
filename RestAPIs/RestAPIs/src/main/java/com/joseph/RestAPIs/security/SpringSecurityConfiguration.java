@@ -1,4 +1,4 @@
-package com.joseph.RestAPIs;
+package com.joseph.RestAPIs.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,7 +23,8 @@ public class SpringSecurityConfiguration {
         //1: Response to preflight request doesn't pass access control check
         //2: basic auth
                 http.authorizeHttpRequests(
-                                auth -> auth
+                                auth ->
+                                        auth
                                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                                         .anyRequest().authenticated()
                                     );
