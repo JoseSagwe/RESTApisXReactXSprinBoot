@@ -1,6 +1,5 @@
 package com.joseph.RestAPIs.helloB;
 
-
 public class HelloBean {
     private  String message;
 

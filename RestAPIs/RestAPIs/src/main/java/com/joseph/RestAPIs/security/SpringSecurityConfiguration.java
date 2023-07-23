@@ -30,8 +30,6 @@ public class SpringSecurityConfiguration {
                                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                                         .anyRequest().authenticated()
                                     );
-
-
                         //basic authentication to show pop up for authentication
                         http.httpBasic(Customizer.withDefaults());
 
