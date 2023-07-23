@@ -16,6 +16,8 @@ public class SpringSecurityConfiguration {
     //basic authentication
     //disabling csrf
     //stateless rest api
+
+
     @Bean
     //Filter chain
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -28,6 +30,7 @@ public class SpringSecurityConfiguration {
                                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                                         .anyRequest().authenticated()
                                     );
+
 
                         //basic authentication to show pop up for authentication
                         http.httpBasic(Customizer.withDefaults());

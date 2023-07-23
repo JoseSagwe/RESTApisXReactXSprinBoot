@@ -35,7 +35,6 @@ public class TodoService {
         return todo; // Return the newly created Todo object
     }
 
-
     public void deleteById(int id) {
         //todo.getId() == id
         // todo -> todo.getId() == id
