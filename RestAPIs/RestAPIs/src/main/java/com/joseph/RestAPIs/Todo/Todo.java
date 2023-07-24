@@ -2,6 +2,10 @@ package com.joseph.RestAPIs.Todo;
 
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
 import java.time.LocalDate;
 
 
@@ -17,7 +21,7 @@ import java.time.LocalDate;
 //JPA
 // Bean -> Database Table
 
-
+@Entity
 public class Todo {
 
     public Todo() {
@@ -34,6 +38,8 @@ public class Todo {
     }
 
 
+    @Id
+    @GeneratedValue
     private int id;
 
     private String username;
